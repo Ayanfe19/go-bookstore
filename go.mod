@@ -1,4 +1,4 @@
-module github/ayanfe19/go-bookstore
+module github.com/ayanfe19/go-bookstore
 
 go 1.16
 
