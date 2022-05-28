@@ -17,7 +17,12 @@ type Book struct {
 func init() {
 	config.Connect()
 	db = config.GetDB()
-	db.AutoMigrate(&Book)
+	db.AutoMigrate(&Book{
+		Model:       gorm.Model{},
+		Name:        "",
+		Author:      "",
+		Publication: "",
+	})
 }
 
 func (b *Book) CreateBook() *Book {
